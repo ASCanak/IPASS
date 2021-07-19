@@ -13,9 +13,9 @@
 
 struct clockData{unsigned int hours = 0; unsigned int minutes = 0; unsigned int seconds = 0; unsigned int day = 1; unsigned int date = 1; unsigned int month = 1; unsigned int year = 21;};
 
-const char *days[7] = { "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday" };
-const char *months[12] = { "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" };
-const unsigned int *size_Of_Months[12] = { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
+const char *days[7] = { "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun" };
+const char *months[12] = { "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" };
+const unsigned int size_Of_Months[12] = { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
 
 class ds1307{
 private:
@@ -59,7 +59,7 @@ private:
             year = 0;
         setClock(year_Registry, year);   //setYear
         
-        if(month > 12);
+        if(month > 12)
             month = 1;
         setClock(month_Registry, month); //setMonth
 
