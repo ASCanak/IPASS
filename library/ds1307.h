@@ -63,11 +63,11 @@ private:
             month = 1;
         setClock(month_Registry, month); //setMonth
 
-        if(date > size_Of_Months[month])
+        if(date > size_Of_Months[month - 1])
             date = 1;
         setClock(date_Registry, date);   //setDate
 
-        if(day < 1 && day > 7)
+        if(day < 1 || day > 7)
             day = 1;
         setClock(day_Registry, day);     //setDayoftheWeek
     }
@@ -76,15 +76,6 @@ public:
     ds1307(hwlib::i2c_bus_bit_banged_scl_sda &i2c_bus):
         bus(i2c_bus)
     {}
-
-    clockData init(){
-        clockData time;
-        
-        setTime(time.hours, time.minutes, time.seconds);
-        setDate(time.day, time.date, time.month, time.year);
-
-        return time;
-    }
 
     bool read(clockData &time){
         if(getClock(seconds_Registry) == 165 )
@@ -106,8 +97,8 @@ public:
         setDate(time.day, time.date, time.month, time.year);
     }    
 
-    void resume(){
-        setClock(seconds_Registry, 0); // Writing 0 to 0x00 to resume the Clock
+    void resume(unsigned int seconds){
+        setClock(seconds_Registry, seconds); // Writing 0 to 0x00 to resume the Clock
     }
 
     void stop(){
