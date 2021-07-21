@@ -1,0 +1,90 @@
+\hypertarget{classds1307}{}\section{ds1307 Class Reference}
+\label{classds1307}\index{ds1307@{ds1307}}
+
+
+D\+S1307 library.  
+
+
+
+
+{\ttfamily \#include $<$ds1307.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classds1307_af00b5a28de3652828671373f44cf7472}{ds1307} (hwlib\+::i2c\+\_\+bus\+\_\+bit\+\_\+banged\+\_\+scl\+\_\+sda \&i2c\+\_\+bus)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+bool \hyperlink{classds1307_a7b3ffbaccd65aca8caa241a7fc243849}{read} (\hyperlink{structclockData}{clock\+Data} \&time)
+\begin{DoxyCompactList}\small\item\em reads the time and date from the clock \end{DoxyCompactList}\item 
+void \hyperlink{classds1307_a8f4da237ebd8ac608e0eabc8e005cac8}{write} (const \hyperlink{structclockData}{clock\+Data} time)
+\begin{DoxyCompactList}\small\item\em writes the time and date to the clock \end{DoxyCompactList}\item 
+void \hyperlink{classds1307_a4a3381031893e29473b07298b7e453a1}{resume} ()
+\begin{DoxyCompactList}\small\item\em resumes the clock \end{DoxyCompactList}\item 
+void \hyperlink{classds1307_a1a907663046341c0b4ec1fea2f4e4eb8}{stop} ()
+\begin{DoxyCompactList}\small\item\em halts the clock \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+D\+S1307 library. 
+
+This is a library for the D\+S1307 R\+TC(Realtime-\/\+Clock) that makes it easy to retrieve the current time, date and availability. It also simplifies setting the current time and date which also simplifies pausing and resuming the clock. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classds1307_af00b5a28de3652828671373f44cf7472}\label{classds1307_af00b5a28de3652828671373f44cf7472}} 
+\index{ds1307@{ds1307}!ds1307@{ds1307}}
+\index{ds1307@{ds1307}!ds1307@{ds1307}}
+\subsubsection{\texorpdfstring{ds1307()}{ds1307()}}
+{\footnotesize\ttfamily ds1307\+::ds1307 (\begin{DoxyParamCaption}\item[{hwlib\+::i2c\+\_\+bus\+\_\+bit\+\_\+banged\+\_\+scl\+\_\+sda \&}]{i2c\+\_\+bus }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor. 
+
+This constructor has one mandatory parameter; an i2c-\/bus. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classds1307_a7b3ffbaccd65aca8caa241a7fc243849}\label{classds1307_a7b3ffbaccd65aca8caa241a7fc243849}} 
+\index{ds1307@{ds1307}!read@{read}}
+\index{read@{read}!ds1307@{ds1307}}
+\subsubsection{\texorpdfstring{read()}{read()}}
+{\footnotesize\ttfamily bool ds1307\+::read (\begin{DoxyParamCaption}\item[{\hyperlink{structclockData}{clock\+Data} \&}]{time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+reads the time and date from the clock 
+
+This function has one mandatory parameter; a \hyperlink{structclockData}{clock\+Data} variable. The function will check if the clock is available and if it is it will update the \hyperlink{structclockData}{clock\+Data} variable with new \hyperlink{structclockData}{clock\+Data} and then return true meaning it has succesfully updated and if it is not available it will return false signalling that the clock is not currently available. \mbox{\Hypertarget{classds1307_a4a3381031893e29473b07298b7e453a1}\label{classds1307_a4a3381031893e29473b07298b7e453a1}} 
+\index{ds1307@{ds1307}!resume@{resume}}
+\index{resume@{resume}!ds1307@{ds1307}}
+\subsubsection{\texorpdfstring{resume()}{resume()}}
+{\footnotesize\ttfamily void ds1307\+::resume (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+resumes the clock 
+
+This function checks if the clock is halted and if it is it will resume the clock. \mbox{\Hypertarget{classds1307_a1a907663046341c0b4ec1fea2f4e4eb8}\label{classds1307_a1a907663046341c0b4ec1fea2f4e4eb8}} 
+\index{ds1307@{ds1307}!stop@{stop}}
+\index{stop@{stop}!ds1307@{ds1307}}
+\subsubsection{\texorpdfstring{stop()}{stop()}}
+{\footnotesize\ttfamily void ds1307\+::stop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+halts the clock 
+
+This function checks if the clock is ticking and if it is it will halt the clock. \mbox{\Hypertarget{classds1307_a8f4da237ebd8ac608e0eabc8e005cac8}\label{classds1307_a8f4da237ebd8ac608e0eabc8e005cac8}} 
+\index{ds1307@{ds1307}!write@{write}}
+\index{write@{write}!ds1307@{ds1307}}
+\subsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily void ds1307\+::write (\begin{DoxyParamCaption}\item[{const \hyperlink{structclockData}{clock\+Data}}]{time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+writes the time and date to the clock 
+
+This function has one mandatory parameter; a \hyperlink{structclockData}{clock\+Data} variable. The function will use the specified structs data to write the time and date to the clock. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+ds1307.\+h\end{DoxyCompactItemize}
