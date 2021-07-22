@@ -15,4 +15,6 @@ Dependencies
  Note that this library has one dependency '[hwlib](https://github.com/wovo/hwlib)'. 
  Also note that '[hwlib](https://github.com/wovo/hwlib)' also has a dependency '[BMPTK](http://github.com/wovo/bmptk)'
  
+ License
+ -----
  This repo and its contents fall under the boost license.
