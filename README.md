@@ -14,8 +14,7 @@ DS1307 RTC
 
 Dependencies
 -----
- Note that this library has one dependency '[hwlib](https://github.com/wovo/hwlib)'. 
- Also note that '[hwlib](https://github.com/wovo/hwlib)' also has a dependency '[BMPTK](http://github.com/wovo/bmptk)'
+ Note that this library has one dependency '[hwlib](https://github.com/wovo/hwlib)' and that '[hwlib](https://github.com/wovo/hwlib)' also has a dependency '[BMPTK](http://github.com/wovo/bmptk)'
  
 Installation
 -----
