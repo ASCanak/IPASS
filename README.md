@@ -29,4 +29,4 @@ Installation
  
 License
 -----
- This repo and its contents fall under the [boost](https://github.com/ASCanak/IPASS/blob/main/LICENSE) license.
+ This repo and its contents fall under the [boost license](https://github.com/ASCanak/IPASS/blob/main/LICENSE).
