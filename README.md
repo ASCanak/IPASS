@@ -1,6 +1,6 @@
 # IPASS
 
-Library for the ds1307 RTC
+DS1307 RTC
 -----
  This repository contains:  
  - A library for the DS1307 RTC (with example and test code).  
