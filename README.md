@@ -10,7 +10,7 @@ DS1307 RTC
 -----
  This repository contains:  
  - A library for the DS1307 RTC (Including a testexample).  
- - An example application 'a clock' built with the ds1307 library.  
+ - An example application 'clock' built with the ds1307 library.  
  - Doxygen documentation of the library.
  - Wiring Diagrams for a standalone ds1307 and a clock with oled and buttons.  
  
