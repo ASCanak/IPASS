@@ -2,6 +2,10 @@
 
 ![20210722_124257 (1)](https://user-images.githubusercontent.com/60601881/126635973-b7848ec1-5c55-4eb8-95fb-c75959157360.jpg)
 
+Author
+-----
+- Ahmet Serdar Çanak (1760039)
+
 DS1307 RTC
 -----
  This repository contains:  
